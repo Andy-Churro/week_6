@@ -70,38 +70,38 @@
 # Tuples are immutable
 # Tuples are defined by parentheses ()
 #example of tuples
-tuple1 = (1, 2, 3, 4, 5)  # tuple of integers
-tuple2 = ('apple', 'banana', 'cherry')  # tuple of strings
-tuple3 = (1, 2, 3, 'apple', 'banana')  # mixed tuple
-tuple4 = (1, 2, 3, 4, 5, 1, 2, 3, 4, 5)  # duplicate elements are allowed
+# tuple1 = (1, 2, 3, 4, 5)  # tuple of integers
+# tuple2 = ('apple', 'banana', 'cherry')  # tuple of strings
+# tuple3 = (1, 2, 3, 'apple', 'banana')  # mixed tuple
+# tuple4 = (1, 2, 3, 4, 5, 1, 2, 3, 4, 5)  # duplicate elements are allowed
 
 
-#access elements in a tuple
-print(tuple1[0])
-print(tuple2[1])
-print(tuple3[2])
-print(tuple4[-1])
+# #access elements in a tuple
+# print(tuple1[0])
+# print(tuple2[1])
+# print(tuple3[2])
+# print(tuple4[-1])
 
 
-#find the length of a tuple
-print(len(tuple1))
-print(len(tuple2))
-print(len(tuple3))
-print(len(tuple4))
+# #find the length of a tuple
+# print(len(tuple1))
+# print(len(tuple2))
+# print(len(tuple3))
+# print(len(tuple4))
 
-#count the number of occurrences of an element in a tuple
-print(tuple4.count(3))
-print(tuple4.count(6))
+# #count the number of occurrences of an element in a tuple
+# print(tuple4.count(3))
+# print(tuple4.count(6))
 
-#find the index of an element in a tuple
-print(tuple1.index(3))  
-print(tuple2.index("banana"))
+# #find the index of an element in a tuple
+# print(tuple1.index(3))  
+# print(tuple2.index("banana"))
 
-#convert a tuple to a list
-print(list(tuple1))
+# #convert a tuple to a list
+# print(list(tuple1))
 
-#convert a list to a tuple
-print(tuple(list(tuple1)))
+# #convert a list to a tuple
+# print(tuple(list(tuple1)))
 
 
 
@@ -130,7 +130,7 @@ and you may call me V."""
 
 
 # Convert the text to a tuple of characters
-
+text_tuple=(tuple(text))
 
 
 
@@ -140,15 +140,16 @@ and you may call me V."""
 
 
 
-
 # Count occurrences of 'v' or 'V' by filtering the text_tuple
-
+vscore=text_tuple.count("v")
+Vscore=text_tuple.count("V")
+vtotal=(Vscore+vscore)
 
 
 
 # Output the result
 
-
+print(vtotal)
 
 
 # dictionarys Accessing a Value from a Nested List###############################
@@ -158,6 +159,15 @@ and you may call me V."""
 
 sample_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 # get length of the list
+print(sample_list[1][2])
+print(sample_list[1])
+print(sample_list[2])
+print(sample_list[0])
+print(sample_list[0][2])
+print(sample_list[2][0])
+
+
+
 print(len(sample_list)) # Output: 3
 #this is called a nested list
 # Extract and print the second element from the first list
@@ -165,18 +175,25 @@ print(len(sample_list)) # Output: 3
 
 sample_list_of_fruit = {"fruits": ["apple", "banana", "cherry"]}
 # Extract and print the second fruit from the list
+print(sample_list_of_fruit["fruits"][2])
+print(sample_list_of_fruit["fruits"][0])
+
 
 
 sample_list_of_lists = {"lists": [[1, 2, 3], [4, 5, 6], [7, 8, 9]]}
 # Extract and print the third element from the second list
-
+print(sample_list_of_lists["lists"][1][2])
+print(sample_list_of_lists["lists"][2][2])
+print(sample_list_of_lists["lists"][0][2])
 
 
 
 sample_list_of_dicts = {"dicts": [{"name": "Alice", "age": 25}, {"name": "Bob", "age": 30}, {"name": "Charlie", "age": 35}]}
 # Extract and print the age of the second person
+print(sample_list_of_dicts["dicts"][1]["age"])
 
-
+print(sample_list_of_dicts["dicts"][2]["name"])
+print(sample_list_of_dicts["dicts"][0]["name"])
 
 
 
